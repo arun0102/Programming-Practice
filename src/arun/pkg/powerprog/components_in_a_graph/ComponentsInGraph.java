@@ -26,6 +26,7 @@ public class ComponentsInGraph {
 			if (arr1 != arr2) {
 				arr1.addAll(arr2);
 				arr2.forEach(x -> vertMap.put(x, arr1));
+				
 			}
 		}
 
