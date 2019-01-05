@@ -39,8 +39,8 @@ public class RoadsInHackerland {
 		for (int i = 1; i < n; i++) {
 			for (int j = i + 1; j <= n; j++) {
 				BigInteger dist = getMinDistance(i, j, roads);
-//				System.out.println(i + "-" + j + " = " + dist);
-//				System.out.println("------------------------");
+				System.out.println(i + "-" + j + " = " + dist);
+				System.out.println("------------------------");
 				sum = sum.add(dist);
 			}
 		}
@@ -49,13 +49,12 @@ public class RoadsInHackerland {
 	}
 
 	static BigInteger getMinDistance(int sourcePos, int destPos, int[][] roads) {
-		sumTotal = BigInteger.valueOf(Integer.MAX_VALUE);
+		sumTotal = BigInteger.ZERO;
 		// pre-populate min distance if there is a direct path
-		BigInteger minDist = BigInteger.valueOf(Integer.MAX_VALUE);
 		for (int i = 0; i < roads.length; i++) {
 			if ((roads[i][0] == sourcePos && roads[i][1] == destPos)
 					|| (roads[i][0] == destPos && roads[i][1] == sourcePos)) {
-				minDist = new BigInteger("2").pow(roads[i][2]);
+				sumTotal = new BigInteger("2").pow(roads[i][2]);
 			} else if ((roads[i][0] == sourcePos || roads[i][1] == sourcePos)) {
 				int x = sourcePos;
 				int y = roads[i][0] == sourcePos ? roads[i][1] : roads[i][0];
@@ -66,16 +65,16 @@ public class RoadsInHackerland {
 			}
 		}
 
-		return minDist.compareTo(sumTotal) > 0 ? sumTotal : minDist;
+		return sumTotal;
 	}
 
-	static BigInteger sumTotal = BigInteger.valueOf(Integer.MAX_VALUE);
+	static BigInteger sumTotal = BigInteger.ZERO;// BigInteger.valueOf(Integer.MAX_VALUE);
 
 	static void minD(int sourcePos, int destPos, int x, int y, BigInteger sum, int[][] roads, List<Integer> nodesArr) {
 		nodesArr.add(y);
 		if ((x == sourcePos && y == destPos) || (x == destPos && y == sourcePos)) {
-//			System.out.println(nodesArr.toString());
-			if (sumTotal.compareTo(sum) > 0) {
+			// System.out.println(nodesArr.toString());
+			if (sumTotal == BigInteger.ZERO || sumTotal.compareTo(sum) > 0) {
 				sumTotal = sum;
 			}
 		} else {
@@ -84,14 +83,13 @@ public class RoadsInHackerland {
 						|| (roads[i][0] == destPos && roads[i][1] == sourcePos)) {
 					// skip this case
 				} else if ((y == roads[i][0] || y == roads[i][1])) {
-					if (y == roads[i][0] && !nodesArr.contains(roads[i][1])
-							&& sumTotal.compareTo(sum.add(new BigInteger("2").pow(roads[i][2]))) > 0) {
-						minD(sourcePos, destPos, x, roads[i][1], sum.add(new BigInteger("2").pow(roads[i][2])), roads,
-								new ArrayList<Integer>(nodesArr));
-					} else if (!nodesArr.contains(roads[i][0])
-							&& sumTotal.compareTo(sum.add(new BigInteger("2").pow(roads[i][2]))) > 0) {
-						minD(sourcePos, destPos, x, roads[i][0], sum.add(new BigInteger("2").pow(roads[i][2])), roads,
-								new ArrayList<Integer>(nodesArr));
+					BigInteger add = sum.add(new BigInteger("2").pow(roads[i][2]));
+					if (sumTotal == BigInteger.ZERO || sumTotal.compareTo(add) > 0) {
+						if (y == roads[i][0] && !nodesArr.contains(roads[i][1])) {
+							minD(sourcePos, destPos, x, roads[i][1], add, roads, new ArrayList<Integer>(nodesArr));
+						} else if (!nodesArr.contains(roads[i][0])) {
+							minD(sourcePos, destPos, x, roads[i][0], add, roads, new ArrayList<Integer>(nodesArr));
+						}
 					}
 				}
 			}
@@ -115,15 +113,15 @@ public class RoadsInHackerland {
 
 		int[][] roads = new int[m][3];
 
-        for (int roadsRowItr = 0; roadsRowItr < m; roadsRowItr++) {
-            String[] roadsRowItems = scanner.nextLine().split(" ");
+		for (int roadsRowItr = 0; roadsRowItr < m; roadsRowItr++) {
+			String[] roadsRowItems = scanner.nextLine().split(" ");
 
-            for (int roadsColumnItr = 0; roadsColumnItr < 3; roadsColumnItr++) {
-                int roadsItem = Integer.parseInt(roadsRowItems[roadsColumnItr].trim());
-                roads[roadsRowItr][roadsColumnItr] = roadsItem;
-            }
-        }
-        long oldTime = System.currentTimeMillis();
+			for (int roadsColumnItr = 0; roadsColumnItr < 3; roadsColumnItr++) {
+				int roadsItem = Integer.parseInt(roadsRowItems[roadsColumnItr].trim());
+				roads[roadsRowItr][roadsColumnItr] = roadsItem;
+			}
+		}
+		long oldTime = System.currentTimeMillis();
 		String result = roadsInHackerland(n, roads);
 
 		System.out.println(result);
