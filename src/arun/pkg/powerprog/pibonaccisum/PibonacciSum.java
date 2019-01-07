@@ -1,4 +1,4 @@
-package arun.pkg.pibonaccisum;
+package arun.pkg.powerprog.pibonaccisum;
 
 /*don't place package name!*/
 

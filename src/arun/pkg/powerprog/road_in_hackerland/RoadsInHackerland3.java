@@ -118,7 +118,7 @@ public class RoadsInHackerland3 {
 				}
 			}
 			// System.out.println(visitedArr.toString());
-			// System.out.println(Arrays.toString(val));
+//			 System.out.println(Arrays.toString(val));
 			for (int j = i; j < val.length; j++) {
 				sum = sum.add(val[j]);
 			}
