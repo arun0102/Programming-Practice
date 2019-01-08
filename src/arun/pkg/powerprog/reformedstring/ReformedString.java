@@ -1,4 +1,4 @@
-package arun.pkg.reformedstring;
+package arun.pkg.powerprog.reformedstring;
 
 public class ReformedString {
 	public static void main(String[] args) throws java.lang.Exception {

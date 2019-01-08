@@ -1,18 +1,41 @@
 package arun.pkg.hackerrank.beautifulpairs;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
-
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+// https://www.hackerrank.com/challenges/beautiful-pairs/problem
 public class BeautifulPairs {
 
 	// Complete the beautifulPairs function below.
 	static int beautifulPairs(int[] A, int[] B) {
-		return 0;
+		int N = A.length;
+
+		Arrays.sort(A);
+		Arrays.sort(B);
+
+		int count = 0;
+		int aindex = 0;
+		int bindex = 0;
+		while (aindex < N) {
+			while (bindex < N && B[bindex] < A[aindex]) {
+				bindex++;
+			}
+			if (bindex == N)
+				break;
+			if (A[aindex] == B[bindex]) {
+				count++;
+				bindex++;
+			}
+			aindex++;
+		}
+
+		if (count < N) {
+			count++;
+		} else {
+			count--;
+		}
+
+		return count;
 	}
 
 	private static final Scanner scanner = new Scanner(System.in);

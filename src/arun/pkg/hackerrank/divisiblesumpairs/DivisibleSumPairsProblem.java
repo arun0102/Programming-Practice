@@ -1,7 +1,7 @@
-package arun.pkg.divisiblesumpairs;
+package arun.pkg.hackerrank.divisiblesumpairs;
 
 import java.io.IOException;
-
+// https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
 public class DivisibleSumPairsProblem {
 
 	// Complete the divisibleSumPairs function below.

@@ -1,8 +1,9 @@
-package arun.pkg.crosswordpuzzle;
+package arun.pkg.hackerrank.crosswordpuzzle;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
+// https://www.hackerrank.com/challenges/crossword-puzzle/problem
 public class CrosswordPuzzleProblem {
 	// Complete the crosswordPuzzle function below.
 	static String[] crosswordPuzzle(String[] crossword, String words) {
@@ -33,41 +34,8 @@ public class CrosswordPuzzleProblem {
 			}
 			dataArr.add(datas);
 		}
-		
+
 		printData(dataArr);
-
-//		String[] wordsArr = words.split(";");
-//		String[] emptyPaths = new String[wordsArr.length];
-//		for (int i = 0; i < crossword.length; i++) {
-//			String fill = crossword[i];
-//			int startPos = fill.indexOf('-');
-//			if(fill.charAt(startPos + 1) == '+') {
-//				// vertical filling
-//				if(i > 0 && crossword[i-1].charAt(startPos) == '+') {
-//					// first empty index starting here
-//					
-//				}
-//			} else {
-//				// horizontal filling
-//				
-//			}
-//			
-//		}
-
-//		for (int i = 0; i < crossword.length; i++) {
-//			String fill = crossword[i];
-//			int startPos = fill.indexOf('-');
-//			
-//			int endPos = fill.lastIndexOf('-');
-//			int length = endPos - startPos + 1;
-//			for (int j = 0; j < wordsArr.length; j++) {
-//				String wrd = wordsArr[j];
-//				if (length == wrd.length()) {
-//					String finalStr = fill.replace(fill.substring(startPos, endPos + 1), wrd);
-//					crossword[i] = finalStr;
-//				}
-//			}
-//		}
 		return crossword;
 	}
 

@@ -1,4 +1,4 @@
-package arun.pkg.minuniqueintegers;
+package arun.pkg.powerprog.minuniqueintegers;
 
 import java.util.HashMap;
 import java.util.Iterator;

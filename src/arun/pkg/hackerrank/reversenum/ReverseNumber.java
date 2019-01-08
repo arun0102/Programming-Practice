@@ -1,4 +1,4 @@
-package arun.pkg.reversenum;
+package arun.pkg.hackerrank.reversenum;
 
 public class ReverseNumber {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package arun.pkg.hackerrank.sherlockandcost;
+package arun.pkg.hackerrank.dp.sherlockandcost;
 
 import java.io.IOException;
 import java.util.Arrays;

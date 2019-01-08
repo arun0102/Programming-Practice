@@ -3,6 +3,7 @@ package arun.pkg.hackerrank.array_left_rotation;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// https://www.hackerrank.com/challenges/array-left-rotation/problem
 public class ArrayLeftRotation {
 
 	private static final Scanner scanner = new Scanner(System.in);

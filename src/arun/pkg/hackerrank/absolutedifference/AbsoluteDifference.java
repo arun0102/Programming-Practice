@@ -2,13 +2,11 @@ package arun.pkg.hackerrank.absolutedifference;
 
 import java.io.IOException;
 import java.util.Scanner;
-
+// https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/problem
 public class AbsoluteDifference {
 	private static final Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) throws IOException {
-		System.out.println(Math.pow(2, 0));
-
 		int n = scanner.nextInt();
 		scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 

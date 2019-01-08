@@ -1,7 +1,6 @@
 package arun.pkg.hackerrank.dp.candies;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Candies {

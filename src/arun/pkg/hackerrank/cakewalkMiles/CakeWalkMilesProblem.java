@@ -1,10 +1,10 @@
-package arun.pkg.cakewalkMiles;
+package arun.pkg.hackerrank.cakewalkMiles;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+// https://www.hackerrank.com/challenges/marcs-cakewalk/problem
 public class CakeWalkMilesProblem {
 
 	// private static final Scanner scanner = new Scanner(System.in);

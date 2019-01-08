@@ -1,4 +1,4 @@
-package arun.pkg.digitcombinations;
+package arun.pkg.hackerrank.digitcombinations;
 
 import java.util.Arrays;
 
