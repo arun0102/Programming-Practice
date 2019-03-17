@@ -1,4 +1,4 @@
-package arun.pkg.sort.mergesort;
+package arun.pkg.practice.sort.mergesort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package arun.pkg.sort.bubblesort;
+package arun.pkg.practice.sort.bubblesort;
 
 import java.util.Scanner;
 

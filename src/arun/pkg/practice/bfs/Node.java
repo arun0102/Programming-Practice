@@ -1,4 +1,4 @@
-package arun.pkg.bfs;
+package arun.pkg.practice.bfs;
 
 public class Node {
 	Node left;

@@ -1,5 +1,6 @@
 package arun.pkg.practice.graphs.floyd_warshall;
 
+// for directed graph
 public class FloydWarshallAlgorithm {
 
 	static int[][] P;

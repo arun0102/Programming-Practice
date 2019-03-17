@@ -1,4 +1,4 @@
-package arun.pkg.bfs;
+package arun.pkg.practice.bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;

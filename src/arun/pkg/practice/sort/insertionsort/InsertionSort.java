@@ -1,4 +1,4 @@
-package arun.pkg.sort.insertionsort;
+package arun.pkg.practice.sort.insertionsort;
 
 import java.util.Scanner;
 

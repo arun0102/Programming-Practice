@@ -1,7 +1,7 @@
 package arun.pkg.practice.graphs.floyd_warshall;
 
 import java.util.Arrays;
-
+// for undirected graph
 public class FloydWarshallAlgorithm2 {
 	private static int nodes = 0;
 	static int[][] P;
