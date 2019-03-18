@@ -1,11 +1,11 @@
-package arun.pkg.search.binary;
+package arun.pkg.practice.search.binary;
 
 import java.util.Arrays;
 
 public class BinarySearch {
 	public static void main(String[] args) {
 		int[] numArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-		int num = 0;
+		int num = 5;
 
 		System.out.println(binarySearch(numArr, num));
 	}
