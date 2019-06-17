@@ -2,6 +2,7 @@ package arun.pkg.practice.graphs.prims;
 
 import java.util.Arrays;
 
+// https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/
 public class PrimsAlogorithmPractice {
 	public static void main(String[] args) {
 		int[][] graph = { { 0, 2, 0, 6, 0 }, { 2, 0, 3, 8, 5 }, { 0, 3, 0, 0, 7 }, { 6, 8, 0, 0, 9 },
