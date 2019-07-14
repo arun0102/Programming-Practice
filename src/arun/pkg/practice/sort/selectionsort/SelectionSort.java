@@ -1,4 +1,4 @@
-package arun.pkg.selectionsort;
+package arun.pkg.practice.sort.selectionsort;
 
 import java.util.Scanner;
 

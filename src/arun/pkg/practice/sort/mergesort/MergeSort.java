@@ -17,15 +17,8 @@ public class MergeSort {
 			return arr;
 		} else {
 			int mid = (int) Math.floor(arr.length / 2);
-			int[] left = new int[mid];
-			int[] right = new int[arr.length - mid];
-			for (int i = 0; i < arr.length; i++) {
-				if (i < mid) {
-					left[i] = arr[i];
-				} else {
-					right[i - mid] = arr[i];
-				}
-			}
+			int[] left = Arrays.copyOfRange(arr, 0, mid);
+			int[] right = Arrays.copyOfRange(arr, mid, arr.length);
 
 			int[] leftArr = divide(left);
 			int[] rightArr = divide(right);
@@ -45,10 +38,12 @@ public class MergeSort {
 			}
 		}
 
+		// add remaining
 		while (i < leftArr.length) {
 			merged[k++] = leftArr[i++];
 		}
 
+		// add remaining
 		while (j < rightArr.length) {
 			merged[k++] = rightArr[j++];
 		}
